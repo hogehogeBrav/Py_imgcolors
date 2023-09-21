@@ -39,7 +39,7 @@ def calculate_average_color(image_path):
 # 色の名前を取得（入力値に近い物）
 def closest_color(requested_color):
     min_colors = {}
-    for key, name in webcolors.CSS3_HEX_TO_NAMES.items():
+    for key, name in webcolors.CSS2_HEX_TO_NAMES.items():
         r_c, g_c, b_c = webcolors.hex_to_rgb(key)
         rd = (r_c - requested_color[0]) ** 2
         gd = (g_c - requested_color[1]) ** 2
